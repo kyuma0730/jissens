@@ -30,6 +30,9 @@ body{
         }
       }
     }
+    .bbb{
+      display: none;
+    }
     &-logo{
        width: 133px;
        margin-top: 10px;
@@ -105,7 +108,6 @@ body{
             border-radius: 20px;
             margin-top: 15px;
             margin-bottom: 37px;
-
             p{
               text-align: center;
               font-size: 24px;
@@ -2952,17 +2954,13 @@ body{
         a:hover{
           color: #E8663B;
         }
-        .last-list{
-          font-size: 0px;
-        }
-        .last-a{
-          font-size: 0px;
-        }
-        .last-list:before{
-          font-size: 37px;
-          content: 'よくあるご質問';
-          color: #0086FC;
-        }
+
+      }
+      .aaa{
+        display: none;
+      }
+      .bbb{
+        display: block;
       }
       input[type="checkbox"]:checked ~ aside {
           top: 65px;
@@ -3754,17 +3752,6 @@ body{
       }
       a:hover{
         color: #E8663B;
-      }
-      .last-list{
-        font-size: 0px;
-      }
-      .last-a{
-        font-size: 0px;
-      }
-      .last-list:before{
-        font-size: 18px;
-        content: 'よくあるご質問';
-        color: #0086FC;
       }
     }
     input[type="checkbox"]:checked ~ aside {
