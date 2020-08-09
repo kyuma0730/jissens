@@ -271,6 +271,7 @@ body{
         height: 216px;
         background: #EF5350;
         border-radius: 12px 0px 0px 12px;
+        z-index: 999;     2
         p{
           text-align: left;
           padding-top: 15px;
@@ -575,6 +576,7 @@ body{
     }
 
     .section6{
+      position: relative;
       background: #2196F312;
       height: 740px;
       &-qa{
@@ -582,95 +584,70 @@ body{
         padding-bottom: 60px;
         margin: 0 120px;
       }
-      .cp_qa *, .cp_qa *:after, .cp_qa *:before {
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        }
-        .cp_qa .cp_actab {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        margin: 0 0 1em 0;
-        color: #FFFFFF;
-        margin-bottom: 32px;
-        }
-        .cp_qa .cp_actab input {
-        position: absolute;
-        opacity: 0;
-        }
-        .qa-br{
-          display: none;
-        }
-        /* 質問 */
-        .cp_qa .cp_actab label {
-        line-height: 1.6em;
-        position: relative;
+      .qa-content{
+        margin-bottom: 50px;
+      }
+      #acMenu .div{
         display: block;
         margin: 0 0 0 0;
-        padding: 1em 2em 1em 1.3em;
         cursor: pointer;
-        text-indent: 1em;
         background: #2196F3;
         width: 1104px;
         height: 96px;
         margin: 0 auto;
-        line-height: 70px;
+        line-height: 96px;
         font-size: 16px;
-        }
-        .qa-sp{
-          font-size: 23px;
-          font-weight: bold;
-
-        }
-        .icon {
-          position: relative;
-          width: 2055px;
-          height: 20px;
-          border-radius: 50%;
-        }
-          .icon__mark, .icon__mar {
-            position: absolute;
-            top: -45px;
-            left: 50%;
-            content: '';
-            display: inline-block;
-            width: 40px;
-            height: 13px;
-            border-top: 3px solid #fff;
-            transform: translateX(-50%);
-          }
-          .icon__mar{
-            top: -50px;
-            left: 1003px;
-            transform: rotate(90deg);
-          }
-        /* 答え */
-        .cp_qa .cp_actab .cp_actab-content {
-        position: relative;
-        overflow: hidden;
-        max-height: 0;
-        -webkit-transition: max-height 0.1s;
-                transition: max-height 0.1s;
+        color: #fff;
+      }
+      #acMenu .divs{
+        background: #2196F312;
         color: black;
         width: 1104px;
         height: 96px;
         margin: 0 auto;
-        line-height: 60px;
+        line-height: 96px;
         border: 1px solid #A1A1A1;
         border-top: none;
-        p{
-          padding-left: 82px;
-          font-size: 16px;
-        }
-        }
-        /* 質問を開いた時の仕様 */
-        /* --答えの高さ */
-        .cp_qa .cp_actab input:checked ~ .cp_actab-content {
-        max-height: 40em;
-        }
-        /* 質問をクリックした時の+の動き */
-        .cp_qa .cp_actab input[type=checkbox]:checked ~::after {
+        box-sizing: border-box;
         display: none;
+      }
+      .qa-spans{
+        padding-left: 73px;
+      }
+      p{
+        padding: 0;
+        margin: 0;
+      }
+      .icon {
+        position: relative;
+        width: 300px;
+        left: 1000px;
+        height: 0px;
+        border-radius: 50%;
+      }
+        .icon__mark, .icon__mar {
+          position: absolute;
+          top: -50px;
+          left: 50%;
+          content: '';
+          display: inline-block;
+          width: 40px;
+          height: 13px;
+          border-top: 3px solid #fff;
+          transform: translateX(-50%);
+        }
+        .icon__mar{
+          top: -55px;
+          left: 125px;
+          transform: rotate(90deg);
+        }
+        .qa-br{
+          display: none;
+        }
+        .qa-sp{
+          font-size: 23px;
+          font-weight: bold;
+          margin-left: 32px;
         }
         .qasp-br{
           display: none;
@@ -1303,52 +1280,46 @@ body{
                 padding-bottom: 67px;
                 margin: 0 120px;
               }
-              .cp_qa *, .cp_qa *:after, .cp_qa *:before {
-                -webkit-box-sizing: border-box;
-                        box-sizing: border-box;
+                .qa-content{
+                  margin-bottom: 50px;
                 }
-                .cp_qa .cp_actab {
-                position: relative;
-                overflow: hidden;
-                width: 800px;
-                margin: 0 auto;
-                color: #FFFFFF;
-                margin-bottom: 32px;
+                #acMenu .div{
+                  display: block;
+                  margin: 0 0 0 0;
+                  cursor: pointer;
+                  background: #2196F3;
+                  width: 800px;
+                  height: 96px;
+                  margin: 0 auto;
+                  line-height: 96px;
+                  font-size: 16px;
+                  color: #fff;
                 }
-                .cp_qa .cp_actab input {
-                position: absolute;
-                opacity: 0;
-
+                #acMenu .divs{
+                  background: #2196F312;
+                  color: black;
+                  width: 800px;
+                  height: 96px;
+                  margin: 0 auto;
+                  line-height: 96px;
+                  border: 1px solid #A1A1A1;
+                  border-top: none;
+                  box-sizing: border-box;
+                  display: none;
                 }
-                /* 質問 */
-                .cp_qa .cp_actab label {
-                line-height: 1.6em;
-                position: relative;
-                display: block;
-                margin: 0 0 0 0;
-                padding: 1em 2em 1em 2.5em;
-                cursor: pointer;
-                text-indent: 1em;
-                background: #2196F3;
-                width: 1104px;
-                height: 96px;
-                margin: 0 auto;
-                line-height: 70px;
-                font-size: 16px;
-                }
-                .qa-sp{
-                  font-size: 23px;
-                  font-weight: bold;
+                .qa-spans{
+                  padding-left: 73px;
                 }
                 .icon {
                   position: relative;
-                  width: 1350px;
-                  height: 20px;
+                  width: 0px;
+                  left: 890px;
+                  height: 0px;
                   border-radius: 50%;
                 }
                   .icon__mark, .icon__mar {
                     position: absolute;
-                    top: -40px;
+                    top: -50px;
                     left: 50%;
                     content: '';
                     display: inline-block;
@@ -1358,40 +1329,10 @@ body{
                     transform: translateX(-50%);
                   }
                   .icon__mar{
-                    top: -45px;
-                    left: 650px;
+                    top: -55px;
+                    left: -26px;
                     transform: rotate(90deg);
                   }
-                /* 答え */
-                .cp_qa .cp_actab .cp_actab-content {
-                position: relative;
-                overflow: hidden;
-                max-height: 0;
-                -webkit-transition: max-height 0.1s;
-                        transition: max-height 0.1s;
-                color: black;
-                width: 800px;
-                height: 96px;
-                margin: 0 auto;
-                line-height: 70px;
-                border: 1px solid #A1A1A1;
-                border-top: none;
-                p{
-                  padding-left: 60px;
-                }
-                }
-                /* 質問を開いた時の仕様 */
-                /* --答えの高さ */
-                .cp_qa .cp_actab input:checked ~ .cp_actab-content {
-                max-height: 40em;
-                }
-                /* 質問をクリックした時の+の動き */
-                .cp_qa .cp_actab input[type=checkbox]:checked + label::after {
-                -webkit-transform: rotateZ(45deg);
-                transform: rotateZ(45deg);
-                -webkit-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
-                }
             }
             .section7{
               margin: 129px 50px 112px 50px;
@@ -1977,93 +1918,58 @@ body{
                 padding-bottom: 67px;
                 margin: 0 120px;
               }
-              .cp_qa *, .cp_qa *:after, .cp_qa *:before {
-                -webkit-box-sizing: border-box;
-                        box-sizing: border-box;
-                }
-                .cp_qa .cp_actab {
-                position: relative;
-                overflow: hidden;
-                width: 800px;
-                margin: 0 auto;
-                color: #FFFFFF;
-                margin-bottom: 32px;
-                }
-                .cp_qa .cp_actab input {
-                position: absolute;
-                opacity: 0;
-
-                }
-                /* 質問 */
-                .cp_qa .cp_actab label {
-                line-height: 1.6em;
-                position: relative;
+              .qa-content{
+                margin-bottom: 50px;
+              }
+              #acMenu .div{
                 display: block;
                 margin: 0 0 0 0;
-                padding: 1em 2em 1em 2.5em;
                 cursor: pointer;
-                text-indent: 1em;
                 background: #2196F3;
-                width: 1104px;
+                width: 700px;
                 height: 96px;
                 margin: 0 auto;
-                line-height: 70px;
+                line-height: 96px;
                 font-size: 16px;
-                }
-                .qa-sp{
-                  font-size: 23px;
-                  font-weight: bold;
-                }
-                .icon {
-                  position: relative;
-                  width: 1350px;
-                  height: 20px;
-                  border-radius: 50%;
-                }
-                  .icon__mark, .icon__mar {
-                    position: absolute;
-                    top: -40px;
-                    left: 50%;
-                    content: '';
-                    display: inline-block;
-                    width: 40px;
-                    height: 13px;
-                    border-top: 3px solid #fff;
-                    transform: translateX(-50%);
-                  }
-                  .icon__mar{
-                    top: -45px;
-                    left: 650px;
-                    transform: rotate(90deg);
-                  }
-                /* 答え */
-                .cp_qa .cp_actab .cp_actab-content {
-                position: relative;
-                overflow: hidden;
-                max-height: 0;
-                -webkit-transition: max-height 0.1s;
-                        transition: max-height 0.1s;
+                color: #fff;
+              }
+              #acMenu .divs{
+                background: #2196F312;
                 color: black;
+                width: 700px;
                 height: 96px;
                 margin: 0 auto;
-                line-height: 70px;
+                line-height: 96px;
                 border: 1px solid #A1A1A1;
                 border-top: none;
-                p{
-                  padding-left: 60px;
+                box-sizing: border-box;
+                display: none;
+              }
+              .qa-spans{
+                padding-left: 73px;
+              }
+              .icon {
+                position: relative;
+                width: 0px;
+                left: 780px;
+                height: 0px;
+                border-radius: 50%;
+              }
+                .icon__mark, .icon__mar {
+                  position: absolute;
+                  top: -50px;
+                  left: 50%;
+                  content: '';
+                  display: inline-block;
+                  width: 40px;
+                  height: 13px;
+                  border-top: 3px solid #fff;
+                  transform: translateX(-50%);
                 }
-                }
-                /* 質問を開いた時の仕様 */
-                /* --答えの高さ */
-                .cp_qa .cp_actab input:checked ~ .cp_actab-content {
-                max-height: 40em;
-                }
-                /* 質問をクリックした時の+の動き */
-                .cp_qa .cp_actab input[type=checkbox]:checked + label::after {
-                -webkit-transform: rotateZ(45deg);
-                transform: rotateZ(45deg);
-                -webkit-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
+                .icon__mar{
+                  top: -55px;
+                  left: -26px;
+                  transform: rotate(90deg);
                 }
             }
             .section7{
@@ -2608,94 +2514,58 @@ body{
               padding-bottom: 67px;
               margin: 0 120px;
             }
-            .cp_qa *, .cp_qa *:after, .cp_qa *:before {
-              -webkit-box-sizing: border-box;
-                      box-sizing: border-box;
-              }
-              .cp_qa .cp_actab {
-              position: relative;
-              overflow: hidden;
-              width: 580px;
-              margin: 0 auto;
-              color: #FFFFFF;
-              margin-bottom: 32px;
-              }
-              .cp_qa .cp_actab input {
-              position: absolute;
-              opacity: 0;
-
-              }
-              /* 質問 */
-              .cp_qa .cp_actab label {
-              line-height: 1.6em;
-              position: relative;
+            .qa-content{
+              margin-bottom: 50px;
+            }
+            #acMenu .div{
               display: block;
               margin: 0 0 0 0;
-              padding: 1em 2em 1em 1em;
               cursor: pointer;
-              text-indent: 1em;
               background: #2196F3;
-              width: 580px;
+              width: 700px;
               height: 96px;
               margin: 0 auto;
-              line-height: 70px;
-              font-size: 15px;
-              }
-              .qa-sp{
-                font-size: 23px;
-                font-weight: bold;
-              }
-              .icon {
-                position: relative;
-                width: 1070px;
-                height: 20px;
-                border-radius: 50%;
-              }
-                .icon__mark, .icon__mar {
-                  position: absolute;
-                  top: -40px;
-                  left: 50%;
-                  content: '';
-                  display: inline-block;
-                  width: 40px;
-                  height: 13px;
-                  border-top: 3px solid #fff;
-                  transform: translateX(-50%);
-                }
-                .icon__mar{
-                  top: -45px;
-                  left: 510px;
-                  transform: rotate(90deg);
-                }
-              /* 答え */
-              .cp_qa .cp_actab .cp_actab-content {
-              position: relative;
-              overflow: hidden;
-              max-height: 0;
-              -webkit-transition: max-height 0.1s;
-                      transition: max-height 0.1s;
+              line-height: 96px;
+              font-size: 16px;
+              color: #fff;
+            }
+            #acMenu .divs{
+              background: #2196F312;
               color: black;
-              width: 580px;
+              width: 700px;
               height: 96px;
               margin: 0 auto;
-              line-height: 70px;
+              line-height: 96px;
               border: 1px solid #A1A1A1;
               border-top: none;
-              p{
-                padding-left: 60px;
+              box-sizing: border-box;
+              display: none;
+            }
+            .qa-spans{
+              padding-left: 73px;
+            }
+            .icon {
+              position: relative;
+              width: 0px;
+              left: 700px;
+              height: 0px;
+              border-radius: 50%;
+            }
+              .icon__mark, .icon__mar {
+                position: absolute;
+                top: -50px;
+                left: 50%;
+                content: '';
+                display: inline-block;
+                width: 40px;
+                height: 13px;
+                border-top: 3px solid #fff;
+                transform: translateX(-50%);
               }
-              }
-              /* 質問を開いた時の仕様 */
-              /* --答えの高さ */
-              .cp_qa .cp_actab input:checked ~ .cp_actab-content {
-              max-height: 40em;
-              }
-              /* 質問をクリックした時の+の動き */
-              .cp_qa .cp_actab input[type=checkbox]:checked + label::after {
-              -webkit-transform: rotateZ(45deg);
-              transform: rotateZ(45deg);
-              -webkit-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
+              .icon__mar{
+                top: -55px;
+                left: -26px;
+                transform: rotate(90deg);
               }
           }
           .section7{
@@ -3035,7 +2905,11 @@ body{
                display:block;
            }
        }
-
+       .section6{
+       .icon{
+         left: 600px;
+       }
+     }
    }
     @media screen and (max-width: 700px) {
       .header{
@@ -3557,99 +3431,75 @@ body{
     margin: 0 30px;
     font-size: 28px;
   }
-  .cp_qa *, .cp_qa *:after, .cp_qa *:before {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    }
-    .cp_qa .cp_actab {
-    position: relative;
-    overflow: hidden;
-    width: 370px;
+  .qa-content{
+    margin-bottom: 50px;
+  }
+  #acMenu .div{
+    display: block;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    background: #2196F3;
+    width: 400px;
+    height: 96px;
     margin: 0 auto;
-    color: #FFFFFF;
-    margin-bottom: 32px;
+    line-height: 96px;
+    font-size: 16px;
+    color: #fff;
+  }
+  #acMenu .divs{
+    background: #2196F312;
+    color: black;
+    width: 400px;
+    height: 96px;
+    margin: 0 auto;
+    line-height: 96px;
+    border: 1px solid #A1A1A1;
+    border-top: none;
+    box-sizing: border-box;
+    display: none;
+  }
+  p{
+    padding-top: 10px;
+    line-height: 35px;
+  }
+  .qa-spans{
+    padding-left: 73px;
+  }
+  .icon {
+    position: relative;
+    width: 0px;
+    left: 75%;
+    height: 0px;
+    border-radius: 50%;
+  }
+    .icon__mark, .icon__mar {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 13px;
+      border-top: 3px solid #fff;
+      transform: translateX(-50%);
     }
-    .cp_qa .cp_actab input {
-    position: absolute;
-    opacity: 0;
+    .icon__mar{
+      top: -55px;
+      left: -26px;
+      transform: rotate(90deg);
     }
+
     .qa-br{
       display: block;
     }
     /* 質問 */
-    .cp_qa .cp_actab label {
-    line-height: 1.6em;
-    position: relative;
-    display: block;
-    margin: 0 0 0 0;
-    padding: 2em 1em 1em 1em;
-    cursor: pointer;
-    text-indent: 1em;
-    background: #2196F3;
-    width: 370px;
-    height: 96px;
-    margin: 0 auto;
-    line-height: 20px;
-    font-size: 13px;
-    }
+
     .qa-span{
-      padding-left: 55px;
+      padding-left: 75px;
     }
     .qa-sp{
       font-size: 23px;
       font-weight: bold;
-    }
-    .icon {
-      position: relative;
-      width: 620px;
-      height: 20px;
-      border-radius: 50%;
-    }
-      .icon__mark, .icon__mar {
-        position: absolute;
-        top: -23px;
-        left: 50%;
-        content: '';
-        display: inline-block;
-        width: 40px;
-        height: 13px;
-        border-top: 3px solid #fff;
-        transform: translateX(-50%);
-      }
-      .icon__mar{
-        top: -28px;
-        left: 285px;
-        transform: rotate(90deg);
-      }
-    /* 答え */
-    .cp_qa .cp_actab .cp_actab-content {
-    position: relative;
-    overflow: hidden;
-    max-height: 0;
-    -webkit-transition: max-height 0.1s;
-            transition: max-height 0.1s;
-    color: black;
-    width: 370px;
-    height: 96px;
-    margin: 0 auto;
-    line-height: 30px;
-    border: 1px solid #A1A1A1;
-    border-top: none;
-    p{
-      padding-left: 60px;
-    }
-    }
-    /* 質問を開いた時の仕様 */
-    /* --答えの高さ */
-    .cp_qa .cp_actab input:checked ~ .cp_actab-content {
-    max-height: 40em;
-    }
-    /* 質問をクリックした時の+の動き */
-    .cp_qa .cp_actab input[type=checkbox]:checked + label::after {
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
     }
     .qasp-br{
       display: block;
@@ -3852,10 +3702,12 @@ body{
         margin-bottom: 50px;
       }
     }
+    .section6{
+      .icon{
+        left: 90%;
+      }
+    }
   }
-
-
-
   @media screen and (max-width: 375px) {
     body{
       position: relative;
@@ -4476,104 +4328,81 @@ height: 560px;
   padding: 57px 0px 60px 0px;
   font-size: 28px;
 }
-.cp_qa *, .cp_qa *:after, .cp_qa *:before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  }
-  .cp_qa .cp_actab {
-  position: relative;
-  overflow: hidden;
-  width: 345px;
-  margin: 0 auto;
-  color: #FFFFFF;
-  margin-bottom: 32px;
-  }
-
-  .cp_qa .cp_actab input {
-  position: absolute;
-  opacity: 0;
-  }
-  .qa-br{
-    display: block;
-  }
-  /* 質問 */
-  .cp_qa .cp_actab label {
-  line-height: 1.6em;
-  position: relative;
+.qa-content{
+  margin-bottom: 28px;
+}
+#acMenu .div{
   display: block;
   margin: 0 0 0 0;
-  padding: 20px 0 10px 0px;
   cursor: pointer;
-  text-indent: 1em;
   background: #2196F3;
   width: 345px;
   height: 80px;
   margin: 0 auto;
-  line-height: 20px;
-  font-size: 14px;
-  }
-  .qa-span{
-    padding-left: 54px;
-  }
-  .qa-sp{
-    font-size: 23px;
-    font-weight: bold;
-  }
-  .icon {
-    position: relative;
-    width: 620px;
-    height: 20px;
-    border-radius: 50%;
-  }
-    .icon__mark, .icon__mar {
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      content: '';
-      display: inline-block;
-      width: 25px;
-      height: 13px;
-      border-top: 3px solid #fff;
-      transform: translateX(-50%);
-    }
-    .icon__mar{
-      top: -30px;
-      left: 292px;
-      transform: rotate(90deg);
-    }
-
-  /* 答え */
-  .cp_qa .cp_actab .cp_actab-content {
-  position: relative;
-  overflow: hidden;
-  max-height: 0;
-  -webkit-transition: max-height 0.1s;
-          transition: max-height 0.1s;
+  line-height: 80px;
+  font-size: 16px;
+  color: #fff;
+}
+#acMenu .divs{
+  background: #2196F312;
   color: black;
   width: 345px;
   height: 80px;
   margin: 0 auto;
-  line-height: 22px;
+  line-height: 80px;
   border: 1px solid #A1A1A1;
   border-top: none;
-  p{
-    padding-left: 45px;
-    font-size: 14px;
+  box-sizing: border-box;
+  display: none;
+}
+p{
+  padding-top: 10px;
+  line-height: 25px;
+  font-size: 14px;
+}
+.qa-spans{
+  padding-left: 53px;
+}
+.icon {
+  position: relative;
+  width: 0px;
+  left: 88%;
+  height: 0px;
+  border-radius: 50%;
+}
+  .icon__mark, .icon__mar {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 13px;
+    border-top: 3px solid #fff;
+    transform: translateX(-50%);
   }
-  }
-  /* 質問を開いた時の仕様 */
-  /* --答えの高さ */
-  .cp_qa .cp_actab input:checked ~ .cp_actab-content {
-  max-height: 40em;
-  }
-  /* 質問をクリックした時の+の動き */
-  .cp_qa .cp_actab input[type=checkbox]:checked + label::after {
-  -webkit-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
+  .icon__mar{
+    top: -56px;
+    left: -19px;
+    transform: rotate(90deg);
   }
 
+  .qa-br{
+    display: block;
+  }
+  /* 質問 */
+
+  .qa-span{
+    padding-left: 55px;
+  }
+  .qa-sp{
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+  .qasp-br{
+    display: block;
+  }
 }
 .section6-sub{
   height: 1000px;
