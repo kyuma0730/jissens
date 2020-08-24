@@ -276,7 +276,7 @@ body{
         z-index: 999;     2
         p{
           text-align: left;
-          padding-top: 15px;
+          padding-top: 10px;
           font-size: 20px;
           letter-spacing: -1px;
           color: #FFFFFF;
@@ -287,11 +287,15 @@ body{
           text-decoration: none;
           color: #FFFFFF;
           position: absolute;
-          top: 10px;
           left: -20px;
           height: 100%;
           width: 100%;
+          writing-mode: vertical-rl;
+          line-height: 33px;
+          font-size: 20px;
+          letter-spacing: -1px;
         }
+
       }
       &-button:hover{
           background: #fff;
@@ -299,7 +303,7 @@ body{
         	border-radius: 12px 0px 0px 12px;       /* 要素の角を丸くする */
           p:hover{
             text-align: left;
-            padding-top: 10px;
+            padding-top: 15px;
             font-size: 20px;
             letter-spacing: -1px;
             color: #EF5350;
@@ -310,7 +314,6 @@ body{
             text-decoration: none;
             color: #EF5350;
             position: absolute;
-            top: 10px;
             left: -20px;
             height: 100%;
             width: 100%;
