@@ -273,7 +273,7 @@ body{
         height: 216px;
         background: #EF5350;
         border-radius: 12px 0px 0px 12px;
-        z-index: 999;     2
+        z-index: 999;
         p{
           text-align: left;
           padding-top: 10px;
@@ -295,7 +295,6 @@ body{
           font-size: 20px;
           letter-spacing: -1px;
         }
-
       }
       &-button:hover{
           background: #fff;
@@ -3187,14 +3186,6 @@ body{
   }
 
 
-  &-button{
-    width: 0;
-    height: 0;
-    p{
-      font-size: 0;
-    }
-  }
-
  &-middle{
    height: 265px;
    background: transparent linear-gradient(245deg, #DEEEFC 0%, #62B5FE 100%) 0% 0% no-repeat padding-box;
@@ -4005,11 +3996,17 @@ margin: 57px 0 0 0;
     }
   }
 }
-
-
 &-button{
   display: none;
+  width: 0;
+  p{
+    display: none;
+  }
+  a{
+    display: none;
+  }
 }
+
 &-middle{
  height: 191px;
  background: transparent linear-gradient(245deg, #DEEEFC 0%, #62B5FE 100%) 0% 0% no-repeat padding-box;
