@@ -1,6 +1,7 @@
 body{
   margin: 0;
   padding: 0;
+  font-family: sans-serif ;
 }
 .header{
   display: flex;
@@ -566,7 +567,7 @@ body{
           display: none;
         }
         .tab.is-active{
-          background: linear-gradient(transparent 60%, #FC8F00 60%);
+          background: linear-gradient(transparent 60%,#FC8F0080 60%);
           width: 110px;
             color: #1976D2;
             transition: all 0.2s ease-out;
@@ -625,7 +626,7 @@ body{
       .icon {
         position: relative;
         width: 300px;
-        left: 1000px;
+        left: 1060px;
         height: 0px;
         border-radius: 50%;
       }
@@ -642,7 +643,7 @@ body{
         }
         .icon__mar{
           top: -55px;
-          left: 125px;
+          left: 124px;
           transform: rotate(90deg);
         }
         .qa-br{
@@ -727,7 +728,7 @@ body{
                   width: 365px;
                   height: 112px;
                   border: 1px solid #B7B7B7;
-
+                  resize: none;
                   }
                   ::placeholder{
                     padding-top: 16px;
@@ -3703,6 +3704,7 @@ body{
   @media screen and (max-width: 375px) {
     body{
       position: relative;
+      width: 375px;
     }
     .header{
         display: flex;
@@ -4603,6 +4605,7 @@ margin: 54px 0 0px 0;
               }
 }
 @media screen and (max-width: 365px) {
+
   .footer-button{
      height: 54px;
      background: #EF5350;
