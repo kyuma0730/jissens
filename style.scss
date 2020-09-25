@@ -1,8 +1,18 @@
-body{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif ;
+@media screen and (min-width:1441px) {
+  .body{
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    max-width: 1440px;
+  }
 }
+
+
+body{
+  margin: 0 auto;
+  padding: 0;
+  font-family: sans-serif;
+  }
 .header{
   display: flex;
   justify-content: space-between;
@@ -723,12 +733,14 @@ body{
                   height: 44px;
                   border: 1px solid #B7B7B7;
                   padding: 0;
+                  -webkit-appearance: none;
                   }
                 textarea{
                   width: 365px;
                   height: 112px;
                   border: 1px solid #B7B7B7;
                   resize: none;
+                  -webkit-appearance: none;
                   }
                   ::placeholder{
                     padding-top: 16px;
@@ -4361,7 +4373,7 @@ p{
 }
   .icon__mark, .icon__mar {
     position: absolute;
-    top: -50px;
+    top: -40px;
     left: 50%;
     content: '';
     display: inline-block;
@@ -4371,7 +4383,7 @@ p{
     transform: translateX(-50%);
   }
   .icon__mar{
-    top: -56px;
+    top: -46px;
     left: -19px;
     transform: rotate(90deg);
   }
